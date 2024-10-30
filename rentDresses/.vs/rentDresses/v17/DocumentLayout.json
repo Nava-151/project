@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\net\\rentDresses\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|d:\\net\\rentdresses\\rentdresses\\services\\availability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|solutionrelative:rentdresses\\services\\availability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|d:\\net\\rentdresses\\rentdresses\\services\\rent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|solutionrelative:rentdresses\\services\\rent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|d:\\net\\rentdresses\\rentdresses\\services\\dress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|solutionrelative:rentdresses\\services\\dress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|d:\\net\\rentdresses\\rentdresses\\services\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|solutionrelative:rentdresses\\services\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|d:\\net\\rentdresses\\rentdresses\\services\\rentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C040F9F3-FFB3-4433-89DC-0496706369D4}|rentDresses\\rentDresses.csproj|solutionrelative:rentdresses\\services\\rentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RentDetails.cs",
+              "DocumentMoniker": "D:\\net\\rentDresses\\rentDresses\\services\\RentDetails.cs",
+              "RelativeDocumentMoniker": "rentDresses\\services\\RentDetails.cs",
+              "ToolTip": "D:\\net\\rentDresses\\rentDresses\\services\\RentDetails.cs",
+              "RelativeToolTip": "rentDresses\\services\\RentDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T11:03:47.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Availability.cs",
+              "DocumentMoniker": "D:\\net\\rentDresses\\rentDresses\\services\\Availability.cs",
+              "RelativeDocumentMoniker": "rentDresses\\services\\Availability.cs",
+              "ToolTip": "D:\\net\\rentDresses\\rentDresses\\services\\Availability.cs",
+              "RelativeToolTip": "rentDresses\\services\\Availability.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:39:32.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rent.cs",
+              "DocumentMoniker": "D:\\net\\rentDresses\\rentDresses\\services\\Rent.cs",
+              "RelativeDocumentMoniker": "rentDresses\\services\\Rent.cs",
+              "ToolTip": "D:\\net\\rentDresses\\rentDresses\\services\\Rent.cs",
+              "RelativeToolTip": "rentDresses\\services\\Rent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:32:50.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\net\\rentDresses\\rentDresses\\services\\User.cs",
+              "RelativeDocumentMoniker": "rentDresses\\services\\User.cs",
+              "ToolTip": "D:\\net\\rentDresses\\rentDresses\\services\\User.cs",
+              "RelativeToolTip": "rentDresses\\services\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:27:36.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dress.cs",
+              "DocumentMoniker": "D:\\net\\rentDresses\\rentDresses\\services\\Dress.cs",
+              "RelativeDocumentMoniker": "rentDresses\\services\\Dress.cs",
+              "ToolTip": "D:\\net\\rentDresses\\rentDresses\\services\\Dress.cs",
+              "RelativeToolTip": "rentDresses\\services\\Dress.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:16:00.189Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
