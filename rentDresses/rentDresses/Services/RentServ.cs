@@ -1,46 +1,49 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using rentDresses.Entities;
 
 namespace rentDresses.services
 {
     public class RentServ
     {
-        public List<Rent> RentList { get; set; }
-        public RentServ()
-        {
-            RentList = new List<Rent>();
-        }
+        
         public List<Rent> GetList()
         {
-            return RentList;
+            if(DataContextManager.DataContext.RentList == null)
+                DataContextManager.DataContext.RentList = new List<Rent>();
+
+            return DataContextManager.DataContext.RentList;
         }
-        public bool PostRent(Rent Rent)
+
+        public bool Add(Rent Rent)
         {
-            RentList.Add(Rent);
+            DataContextManager.DataContext.RentList.Add(Rent);
             return true;
         }
+
         public bool DeleteRent(int id)
         {
-            Rent r = RentList.Find(l => l.Id == id);
+            Rent r = DataContextManager.DataContext.RentList.Find(l => l.Id == id);
             if (r != null)
             {
-                RentList.Remove(r);
+                DataContextManager.DataContext.RentList.Remove(r);
                 return true;
             }
             return false;
         }
-        public bool PutRent(int id,Rent Rent)
+
+        public bool Update(int id,Rent Rent)
         {
-            Rent rent = RentList.Find(r => r.Id == id);
+            Rent rent = DataContextManager.DataContext.RentList.Find(r => r.Id == id);
             if (rent != null)
             {
-                RentList.Remove(rent);
-                RentList.Add(Rent);
+                DataContextManager.DataContext.RentList.Remove(rent);
+                DataContextManager.DataContext.RentList.Add(Rent);
             }
             return false;
         }
         public Rent GetRentById(int id)
         {
-            return RentList.Find(r => r.Id == id);
+            return DataContextManager.DataContext.RentList.Find(r => r.Id == id);
         }
     }
 }

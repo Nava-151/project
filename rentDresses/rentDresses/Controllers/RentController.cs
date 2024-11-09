@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using rentDresses.Entities;
 using rentDresses.services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,21 +10,24 @@ namespace rentDresses.Controllers
     [ApiController]
     public class RentController : ControllerBase
     {
-        static RentServ rList=new RentServ();
+        readonly RentServ rList=new RentServ();
         // GET: api/<RentController>
         [HttpGet]
         public ActionResult<List<Rent>> Get()
         {
            List<Rent> res=rList.GetList();
-           if(res==null)
-                return NotFound();
+           //if(res==null)
+           //     return NotFound();
             return res;
         }
 
         // GET api/<RentController>/5
         [HttpGet("{id}")]
-        public ActionResult<Rent> Get(int id)
+        public ActionResult<Rent> GetById(int id)
         {
+            if (id < 0)
+                return BadRequest();
+
             Rent res = rList.GetRentById(id);
             if (res == null)
                 return NotFound();
@@ -32,19 +36,18 @@ namespace rentDresses.Controllers
 
         // POST api/<RentController>
         [HttpPost]
-        public ActionResult Post([FromBody] Rent Rent)
+        //never return false in service
+        public ActionResult<bool> Post([FromBody] Rent Rent)
         {
-            if(rList.PostRent(Rent)==false)
-                return NotFound();
-            return Ok();
+            return rList.Add(Rent);
         }
 
         // PUT api/<RentController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Rent Rent)
+        public ActionResult<bool> Put(int id, [FromBody] Rent Rent)
         {
-            if(rList.PutRent(id,Rent))
-                return Ok();
+            if (rList.Update(id, Rent))
+                return true;
             return NotFound();
         }
 

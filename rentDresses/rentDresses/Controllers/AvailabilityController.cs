@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using rentDresses.Entities;
 using rentDresses.services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,21 +10,24 @@ namespace rentDresses.Controllers
     [ApiController]
     public class AvailabilityController : ControllerBase
     {
-        static AvailabilityService ulist = new AvailabilityService();
+        readonly AvailabilityService ulist = new AvailabilityService();
         // GET: api/<AvailabilityController>
         [HttpGet]
         public ActionResult<List<Availability>> Get()
         {
             List<Availability> res = ulist.GetList();
-            if (res == null)
-                return NotFound();
+            //if (res == null)
+            //    return NotFound();
             return res;
         }
 
         // GET api/<AvailabilityController>/5
         [HttpGet("{id}")]
-        public ActionResult<Availability> Get(int id)
+        public ActionResult<Availability> GetById(int id)
         {
+            if (id < 0)
+                return BadRequest();
+
             Availability res = ulist.GetAvailabilityById(id);
             if (res == null)
                 return NotFound();
@@ -32,19 +36,17 @@ namespace rentDresses.Controllers
 
         // POST api/<AvailabilityController>
         [HttpPost]
-        public ActionResult Post([FromBody] Availability Availability)
+        public ActionResult<bool> Post([FromBody] Availability Availability)
         {
-            if (ulist.PostAvailability(Availability) == false)
-                return NotFound();
-            return Ok();
+            return ulist.Add(Availability);
         }
 
         // PUT api/<AvailabilityController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Availability Availability)
+        public ActionResult<bool> Put(int id, [FromBody] Availability Availability)
         {
-            if (ulist.PutAvailability(id, Availability))
-                return Ok();
+            if (ulist.Update(id, Availability))
+                return true;
             return NotFound();
         }
 

@@ -1,49 +1,59 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using rentDresses.Entities;
 
 namespace rentDresses.services
 {
     public class DressService
     {
-        public List<Dress> DressList { get; set; }
-        public DressService()
-        {
-            DressList = new List<Dress>();
-            DateTime d=new DateTime(2000,10,1);
-            Dress dre=new Dress(1, 1, "red", Seazon.Fall, 3, "saten", d);
-            DressList.Add(dre);
-        }
+
         public List<Dress> GetList()
         {
-            return DressList;
+            if (DataContextManager.DataContext.DressList == null)
+                DataContextManager.DataContext.DressList = new List<Dress>();
+            return DataContextManager.DataContext.DressList;
         }
-        public bool PostDress(Dress dress)
+        public Dress GetDressById(int id)
         {
-            DressList.Add(dress);
+            return DataContextManager.DataContext.DressList.Find(d => d.Id == id);
+        }
+
+        public bool Add(Dress dress)
+        {
+            if (DataContextManager.DataContext.DressList.Find(d => dress.Id == d.Id) == null)
+                return false;
+            DataContextManager.DataContext.DressList.Add(dress);
             return true;
         }
+
         public bool DeleteDress(int id)
         {
-            Dress d = DressList.Find(l => l.Id == id);
+            Dress d = DataContextManager.DataContext.DressList.Find(l => l.Id == id);
             if (d != null)
             {
-                DressList.Remove(d);
+                DataContextManager.DataContext.DressList.Remove(d);
                 return true;
             }
             return false;
         }
-        public bool PutDress(int id,Dress dress)
+
+        public bool Update(int id, Dress dress)
         {
-            Dress d = DressList.Find(d => d.Id == id);
+            Dress d = DataContextManager.DataContext.DressList.Find(d => d.Id == id);
             if (d != null)
             {
-                DressList.Remove(d);
-                DressList.Add(dress);
+                DataContextManager.DataContext.DressList.Remove(d);
+                DataContextManager.DataContext.DressList.Add(dress);
             }
             return false;
+
+
         }
-        public Dress GetDressById(int id)
-        {
-            return DressList.Find(d => d.Id == id);
-        }
+
+
+
+
+
+
     }
 }
+

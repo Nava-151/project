@@ -442,11 +442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\net\\rentDresses\\rentDresses\\rentDresses.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\gitDress\\rentDresses\\rentDresses\\rentDresses.csproj",
       "projectName": "rentDresses",
-      "projectPath": "F:\\net\\rentDresses\\rentDresses\\rentDresses.csproj",
+      "projectPath": "C:\\Users\\user1\\Desktop\\gitDress\\rentDresses\\rentDresses\\rentDresses.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "F:\\net\\rentDresses\\rentDresses\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\gitDress\\rentDresses\\rentDresses\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",

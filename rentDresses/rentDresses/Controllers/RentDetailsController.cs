@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using rentDresses.Entities;
 using rentDresses.services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,42 +10,45 @@ namespace rentDresses.Controllers
     [ApiController]
     public class RentDetailsController : ControllerBase
     {
-        static RentDetailsService rList = new RentDetailsService();
+        readonly RentDetailsService rList = new RentDetailsService();
         // GET: api/<RentDetailsController>
         [HttpGet]
         public ActionResult<List<RentDetails>> Get()
         {
             List<RentDetails> res = rList.GetList();
-            if (res == null)
-                return NotFound();
+            //if (res == null)
+            //    return NotFound();
             return res;
         }
 
         // GET api/<RentDetailsController>/5
         [HttpGet("{id}")]
-        public ActionResult<RentDetails> Get(int id)
+        public ActionResult<RentDetails> GetById(int id)
         {
+            if (id < 0)
+                return BadRequest();
+
             RentDetails res = rList.GetRentDetailsById(id);
             if (res == null)
                 return NotFound();
             return res;
         }
 
+        //never return false in service
         // POST api/<RentDetailsController>
         [HttpPost]
-        public ActionResult Post([FromBody] RentDetails RentDetails)
+        public ActionResult<bool> Post([FromBody] RentDetails RentDetails)
         {
-            if (rList.PostRentDetails(RentDetails) == false)
-                return NotFound();
-            return Ok();
+            return rList.Add(RentDetails);
+              
         }
 
         // PUT api/<RentDetailsController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] RentDetails RentDetails)
+        public ActionResult<bool> Put(int id, [FromBody] RentDetails RentDetails)
         {
-            if (rList.PutRentDetails(id, RentDetails))
-                return Ok();
+            if (rList.Update(id, RentDetails))
+                return true;
             return NotFound();
         }
 

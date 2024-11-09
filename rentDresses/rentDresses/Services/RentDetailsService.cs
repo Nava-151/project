@@ -1,44 +1,50 @@
-﻿namespace rentDresses.services
+﻿using rentDresses.Entities;
+
+namespace rentDresses.services
 {
     public class RentDetailsService
     {
-        public List<RentDetails> RentDetailsList { get; set; }
-        public RentDetailsService()
-        {
-            RentDetailsList = new List<RentDetails>();
-        }
+
+        
         public List<RentDetails> GetList()
         {
-            return RentDetailsList;
+            if(DataContextManager.DataContext.RentDetailsList== null)
+                DataContextManager.DataContext.RentDetailsList = new List<RentDetails>();
+
+            return DataContextManager.DataContext.RentDetailsList;
         }
-        public bool PostRentDetails(RentDetails RentDetails)
+
+        public bool Add(RentDetails RentDetails)
         {
-            RentDetailsList.Add(RentDetails);
+            DataContextManager.DataContext.RentDetailsList.Add(RentDetails);
             return true;
         }
+
         public bool DeleteRentDetails(int id)
         {
-            RentDetails u = RentDetailsList.Find(l => l.Id == id);
+            RentDetails u = DataContextManager.DataContext.RentDetailsList.Find(l => l.Id == id);
             if (u != null)
             {
-                RentDetailsList.Remove(u);
+                DataContextManager.DataContext.RentDetailsList.Remove(u);
                 return true;
             }
             return false;
         }
-        public bool PutRentDetails(int id, RentDetails RentDetails)
+
+        public bool Update(int id, RentDetails RentDetails)
         {
-            RentDetails d = RentDetailsList.Find(d => d.Id == id);
+            RentDetails d = DataContextManager.DataContext.RentDetailsList.Find(d => d.Id == id);
             if (d != null)
             {
-                RentDetailsList.Remove(d);
-                RentDetailsList.Add(RentDetails);
+                DataContextManager.DataContext.RentDetailsList.Remove(d);
+                DataContextManager.DataContext.RentDetailsList.Add(RentDetails);
             }
             return false;
         }
+
         public RentDetails GetRentDetailsById(int id)
         {
-            return RentDetailsList.Find(d => d.Id == id);
+            return DataContextManager.DataContext.RentDetailsList.Find(d => d.Id == id);
         }
     }
 

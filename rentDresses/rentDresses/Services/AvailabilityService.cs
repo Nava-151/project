@@ -1,44 +1,50 @@
-﻿namespace rentDresses.services
+﻿using rentDresses.Entities;
+
+namespace rentDresses.services
 {
     public class AvailabilityService
     {
-        public List<Availability> AvailabilityList { get; set; }
         public AvailabilityService()
         {
-            AvailabilityList = new List<Availability>();
+            DataContextManager d=new DataContextManager();
         }
         public List<Availability> GetList()
         {
-            return AvailabilityList;
+            if (DataContextManager.DataContext.AvailabilityList == null)
+                return new List<Availability>();
+            return DataContextManager.DataContext.AvailabilityList;
         }
-        public bool PostAvailability(Availability Availability)
+        public bool Add(Availability Availability)
         {
-            AvailabilityList.Add(Availability);
+            if(DataContextManager.DataContext.AvailabilityList == null) {
+                DataContextManager.DataContext.AvailabilityList = new List<Availability>();
+            }
+            DataContextManager.DataContext.AvailabilityList.Add(Availability);
             return true;
         }
         public bool DeleteAvailability(int id)
         {
-            Availability a = AvailabilityList.Find(l => l.Id == id);
+            Availability a = DataContextManager.DataContext.AvailabilityList.Find(l => l.Id == id);
             if (a != null)
             {
-                AvailabilityList.Remove(a);
+                DataContextManager.DataContext.AvailabilityList.Remove(a);
                 return true;
             }
             return false;
         }
-        public bool PutAvailability(int id, Availability Availability)
+        public bool Update(int id, Availability Availability)
         {
-            Availability a = AvailabilityList.Find(d => d.Id == id);
+            Availability a = DataContextManager.DataContext.AvailabilityList.Find(d => d.Id == id);
             if (a != null)
             {
-                AvailabilityList.Remove(a);
-                AvailabilityList.Add(Availability);
+                DataContextManager.DataContext.AvailabilityList.Remove(a);
+                DataContextManager.DataContext.AvailabilityList.Add(Availability);
             }
             return false;
         }
         public Availability GetAvailabilityById(int id)
         {
-            return AvailabilityList.Find(d => d.Id == id);
+            return DataContextManager.DataContext.AvailabilityList.Find(d => d.Id == id);
         }
     }
 
