@@ -5,10 +5,10 @@
     {
         //link to customers
         public int Id { get; set; }
-        public DateOnly CollectionDate { get; set; }
-        public DateOnly ReturnDate { get; set; }
+        public DateTime CollectionDate { get; set; }
+        public DateTime ReturnDate { get; set; }
         public double TotalPrice { get; set; }
-        public DateOnly CreateDate { get; set; }
+        public DateTime CreateDate { get; set; }
         public string Name { get; set; }
         public Pay Payment { get; set; }
 

@@ -10,8 +10,12 @@ namespace rentDresses.Controllers
     [ApiController]
     public class DressController : ControllerBase
     {
-        readonly DressService dList=new DressService();
+        readonly DressService dList;
 
+        public DressController(DressService d)
+        {
+            dList= d;
+        }
         // GET: api/<DressController>
         [HttpGet]
         public ActionResult<List<Dress>> Get()

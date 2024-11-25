@@ -126,3 +126,37 @@ C:\Users\user1\Desktop\gitDress\rentDresses\rentDresses\obj\Debug\net6.0\refint\
 C:\Users\user1\Desktop\gitDress\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.pdb
 C:\Users\user1\Desktop\gitDress\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.genruntimeconfig.cache
 C:\Users\user1\Desktop\gitDress\rentDresses\rentDresses\obj\Debug\net6.0\ref\rentDresses.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.csproj.AssemblyReference.cache
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.AssemblyInfoInputs.cache
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.AssemblyInfo.cs
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.csproj.CoreCompileInputs.cache
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.MvcApplicationPartsAssemblyInfo.cs
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.MvcApplicationPartsAssemblyInfo.cache
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\refint\rentDresses.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.pdb
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\appsettings.Development.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\appsettings.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\rentDresses.exe
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\Data\data.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\rentDresses.deps.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\rentDresses.runtimeconfig.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\rentDresses.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\rentDresses.pdb
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\Microsoft.OpenApi.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\staticwebassets.build.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\staticwebassets.development.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\staticwebassets\msbuild.rentDresses.Microsoft.AspNetCore.StaticWebAssets.props
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\staticwebassets\msbuild.build.rentDresses.props
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.rentDresses.props
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.rentDresses.props
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\staticwebassets.pack.json
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\scopedcss\bundle\rentDresses.styles.css
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDres.07856301.Up2Date
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\rentDresses.genruntimeconfig.cache
+Y:\Groups\Group_4\שפירא נאוה\rent dress 7th lss\project-main\rentDresses\rentDresses\obj\Debug\net6.0\ref\rentDresses.dll
+C:\Users\user1\Desktop\gitDress\rentDresses\rentDresses\bin\Debug\net6.0\Data\data.json

@@ -1,6 +1,6 @@
 ﻿namespace rentDresses.Entities
 {
-    public enum Seazon { Winter, Fall, Spring, Summer }
+    public enum Seazon { Winter, Fall, Spring, Summer}
     public class Dress
     {
 
@@ -12,7 +12,10 @@
         public int Amount { get; set; }
         public string FabricType { get; set; }
         public DateTime YearOfManufacture { get; set; }
-
+        public Dress()
+        {
+            
+        }
         public Dress(int id, int size, string color, Seazon seazons, int amount, string fabricType, DateTime yearOfManufacture)
         {
             Id = id;
@@ -23,5 +26,10 @@
             FabricType = fabricType;
             YearOfManufacture = yearOfManufacture;
         }
+    }
+    //
+    public class DataDress
+    {
+        public List<Dress> db { get; set; }
     }
 }

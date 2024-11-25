@@ -1,7 +1,12 @@
+using rentDresses.Entities;
+using rentDresses;
+using rentDresses.services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddScoped<DressService>();
+builder.Services.AddScoped<IdataContext, DataContextDress>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
