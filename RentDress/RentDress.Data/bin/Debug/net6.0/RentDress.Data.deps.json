@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RentDress.Data/1.0.0": {
+        "dependencies": {
+          "RentDress.Core": "1.0.0"
+        },
+        "runtime": {
+          "RentDress.Data.dll": {}
+        }
+      },
+      "RentDress.Core/1.0.0": {
+        "runtime": {
+          "RentDress.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RentDress.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RentDress.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

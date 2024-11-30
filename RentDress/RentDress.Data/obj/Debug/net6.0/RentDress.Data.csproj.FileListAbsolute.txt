@@ -1,0 +1,16 @@
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.AssemblyInfo.cs
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\bin\Debug\net6.0\RentDress.Data.deps.json
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\bin\Debug\net6.0\RentDress.Data.dll
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\bin\Debug\net6.0\RentDress.Data.pdb
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\bin\Debug\net6.0\RentDress.Core.dll
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\bin\Debug\net6.0\RentDress.Core.pdb
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.csproj.CopyComplete
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.dll
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\refint\RentDress.Data.dll
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\RentDress.Data.pdb
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\obj\Debug\net6.0\ref\RentDress.Data.dll
+C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Data\bin\Debug\net6.0\data.json
