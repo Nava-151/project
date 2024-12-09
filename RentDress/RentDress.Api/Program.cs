@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using RentDress.Core.Entities;
 using RentDress.Core.IRepository;
 using RentDress.Core.IService;
@@ -35,7 +36,11 @@ namespace RentDress.Api
             builder.Services.AddScoped<IRepository<RentDetailsEntity>, RentDetailsRepository>();
 
 
-            builder.Services.AddSingleton<DataContext>();
+            builder.Services.AddDbContext<DataContext>(option =>
+            {
+            option.UseSqlServer("Data Source=NAVA-SHAPIRA;Initial Catalog=DressRent;Integrated Security=true;");
+            });
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -51,7 +56,6 @@ namespace RentDress.Api
             }
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

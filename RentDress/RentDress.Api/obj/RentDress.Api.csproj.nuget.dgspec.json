@@ -48,6 +48,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -170,6 +186,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -216,6 +238,9 @@
             "projectReferences": {
               "C:\\Users\\user1\\Desktop\\gitDress\\RentDress\\RentDress.Core\\RentDress.Core.csproj": {
                 "projectPath": "C:\\Users\\user1\\Desktop\\gitDress\\RentDress\\RentDress.Core\\RentDress.Core.csproj"
+              },
+              "C:\\Users\\user1\\Desktop\\gitDress\\RentDress\\RentDress.Data\\RentDress.Data.csproj": {
+                "projectPath": "C:\\Users\\user1\\Desktop\\gitDress\\RentDress\\RentDress.Data\\RentDress.Data.csproj"
               }
             }
           }

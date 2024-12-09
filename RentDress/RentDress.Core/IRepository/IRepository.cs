@@ -11,6 +11,7 @@ namespace RentDress.Core.IRepository
     {
          List<T> GetAllData();
          T GetDataById(int id);
+        int GetIndex(int id);
          bool Add(T entity);
          bool Update(T entity);
          bool Delete(int id);

@@ -29,8 +29,7 @@ namespace RentDress.Api.Controllers
         [HttpGet("{id}")]
         public ActionResult<AvailabilityEntity> GetById(int id)
         {
-            if (id < 0)
-                return BadRequest();
+
             AvailabilityEntity res = _availabilityService.GetById(id);
             if (res == null)
                 return NotFound();

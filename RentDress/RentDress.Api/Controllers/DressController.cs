@@ -12,7 +12,7 @@ namespace RentDress.Api.Controllers
     [ApiController]
 
     public class DressController : ControllerBase
-    {
+    { 
 
 
         //{1,18,"red",0,18,"cotton",new DateTime(2020,10,05));
@@ -29,7 +29,10 @@ namespace RentDress.Api.Controllers
         [HttpGet]
         public ActionResult<List<DressEntity>> Get()
         {
-            return _dressService.GetDressList();
+            var res= _dressService.GetDressList();
+            if(res == null) 
+                return NotFound();
+            return res;
         }
 
         // GET api/<DressController>/5
@@ -49,7 +52,9 @@ namespace RentDress.Api.Controllers
 
         public ActionResult<bool> Post([FromBody] DressEntity DressEntity)
         {
-            return _dressService.Add(DressEntity);
+            bool b= _dressService.Add(DressEntity);
+            if(!b) return BadRequest();
+            return b;
         }
 
         // PUT api/<DressController>/5

@@ -1,4 +1,5 @@
-﻿using RentDress.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using RentDress.Core.Entities;
 using RentDress.Core.IRepository;
 using System;
 using System.Collections.Generic;
@@ -19,19 +20,19 @@ namespace RentDress.Data.Repository
 
         public List<RentDetailsEntity> GetAllData()
         {
-            return _dataContext.RentDetailsList;
+            return _dataContext.RentDetailsList.ToList();
         }
 
         public RentDetailsEntity GetDataById(int id)
         {
-            return _dataContext.RentDetailsList.Find(d => d.Id == id);
+            return _dataContext.RentDetailsList.ToList().Find(d => d.Id == id);
         }
         public bool Add(RentDetailsEntity entity)
         {
             try
             {
                 _dataContext.RentDetailsList.Add(entity);
-                _dataContext.SaveData();
+                _dataContext.SaveChanges();
                 return true;
             }
             catch (Exception ex)
@@ -44,10 +45,10 @@ namespace RentDress.Data.Repository
         {
             try
             {
-                RentDetailsEntity entity = _dataContext.RentDetailsList.Find(d => d.Id == id);
+                RentDetailsEntity entity = _dataContext.RentDetailsList.ToList().Find(d => d.Id == id);
 
                 _dataContext.RentDetailsList.Remove(entity);
-                _dataContext.SaveData();
+                _dataContext.SaveChanges();
                 return true;
 
             }
@@ -63,17 +64,31 @@ namespace RentDress.Data.Repository
         {
             try
             {
-                RentDetailsEntity rentDetails = _dataContext.RentDetailsList.Find(d => d.Id == entity.Id);
-                if (rentDetails == null)
+
+                int index = _dataContext.RentDetailsList.ToList().FindIndex(d => d.Id == entity.Id);
+                if (index < 0)
                     return false;
-                _dataContext.RentDetailsList.Remove(rentDetails);
-                _dataContext.RentDetailsList.Add(entity);
-                _dataContext.SaveData();
+                if (_dataContext.RentDetailsList.ToList()[index].UserCode > 0)
+                    _dataContext.RentDetailsList.ToList()[index].UserCode = entity.UserCode;
+
+                if (_dataContext.RentDetailsList.ToList()[index].RentCode > 0)
+                    _dataContext.RentDetailsList.ToList()[index].RentCode = entity.RentCode;
+
+                if (_dataContext.RentDetailsList.ToList()[index].DressCode > 0)
+                    _dataContext.RentDetailsList.ToList()[index].DressCode = entity.DressCode;
+
+
+                _dataContext.SaveChanges();
                 return true;
             }
             catch (Exception ex) { return false; }
 
         }
+        public int GetIndex(int id)
+        {
+            return _dataContext.RentDetailsList.ToList().FindIndex(a => a.Id == id);
+        }
+
 
     }
 }

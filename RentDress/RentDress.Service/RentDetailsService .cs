@@ -7,11 +7,8 @@ namespace RentDress.Service
     public class RentDetailsService : IRentDetailsService
     {
         readonly IRepository<RentDetailsEntity> _RentDetailsRepository;
-        //check
-        public RentDetailsService()
-        {
+    
 
-        }
 
         public RentDetailsService(IRepository<RentDetailsEntity> RentDetailsRepository)
         {
@@ -30,21 +27,21 @@ namespace RentDress.Service
 
         public bool Add(RentDetailsEntity RentDetails)
         {
-            if (_RentDetailsRepository.Add(RentDetails))
+            if (_RentDetailsRepository.GetIndex(RentDetails.Id) == -1 && _RentDetailsRepository.Add(RentDetails))
                 return true;
             return false;
         }
 
         public bool Delete(int id)
         {
-            if (_RentDetailsRepository.Delete(id))
+            if (_RentDetailsRepository.GetIndex(id)>-1&&_RentDetailsRepository.Delete(id))
                 return true;
             return false;
         }
 
         public bool Update(RentDetailsEntity RentDetails)
         {
-            if (_RentDetailsRepository.Update(RentDetails))
+            if (_RentDetailsRepository.GetIndex(RentDetails.Id) > -1 && _RentDetailsRepository.Update(RentDetails))
                 return true;
             return false;
         }

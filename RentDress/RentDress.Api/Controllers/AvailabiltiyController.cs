@@ -23,7 +23,10 @@ namespace RentDress.Api.Controllers
         [HttpGet]
         public ActionResult<List<AvailabilityEntity>> Get()
         {
-            return _availabilityService.GetAvailabilityList();
+            var res= _availabilityService.GetAvailabilityList();
+            if (res == null)
+                return NotFound();
+            return res;
         }
 
         // GET api/<AvailabiltyController>/5
@@ -43,7 +46,10 @@ namespace RentDress.Api.Controllers
 
         public ActionResult<bool> Post([FromBody] AvailabilityEntity availabilityEntity)
         {
-            return _availabilityService.Add(availabilityEntity);
+            bool b= _availabilityService.Add(availabilityEntity);
+            if(!b)
+                return BadRequest();
+            return b;
         }
 
         // PUT api/<AvailabiltyController>/5

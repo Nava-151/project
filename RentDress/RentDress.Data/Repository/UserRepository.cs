@@ -19,19 +19,19 @@ namespace RentDress.Data.Repository
 
         public List<UserEntity> GetAllData()
         {
-            return _dataContext.UserList;
+            return _dataContext.UserList.ToList();
         }
 
         public UserEntity? GetDataById(int id)
         {
-            return _dataContext.UserList.Find(d => d.Id == id);
+            return _dataContext.UserList.ToList().Find(d => d.Id == id);
         }
         public bool Add(UserEntity entity)
         {
             try
             {
                 _dataContext.UserList.Add(entity);
-                _dataContext.SaveData();
+                _dataContext.SaveChanges();
                 return true;
             }
             catch (Exception ex)
@@ -44,10 +44,10 @@ namespace RentDress.Data.Repository
         {
             try
             {
-                UserEntity entity = _dataContext.UserList.Find(d => d.Id == id);
+                UserEntity entity = _dataContext.UserList.ToList().Find(d => d.Id == id);
 
                 _dataContext.UserList.Remove(entity);
-                _dataContext.SaveData();
+                _dataContext.SaveChanges();
                 return true;
 
             }
@@ -63,16 +63,37 @@ namespace RentDress.Data.Repository
         {
             try
             {
-                UserEntity user = _dataContext.UserList.Find(d => d.Id == entity.Id);
-                if (user == null)
+                int index = _dataContext.UserList.ToList().FindIndex(d => d.Id == entity.Id);
+                if (index <0)
                     return false;
-                _dataContext.UserList.Remove(user);
-                _dataContext.UserList.Add(entity);
-                _dataContext.SaveData();
+                if (_dataContext.UserList.ToList()[index].Tz!="")
+                    _dataContext.UserList.ToList()[index].Tz = entity.Tz;
+
+                if (_dataContext.UserList.ToList()[index].TellNum != "")
+                    _dataContext.UserList.ToList()[index].TellNum = entity.TellNum;
+
+                if (_dataContext.UserList.ToList()[index].Name != "")
+                    _dataContext.UserList.ToList()[index].Name = entity.Name;
+
+                if (_dataContext.UserList.ToList()[index].Email != "")
+                    _dataContext.UserList.ToList()[index].Email = entity.Email;
+
+                if (_dataContext.UserList.ToList()[index].Addres != "")
+                    _dataContext.UserList.ToList()[index].Addres = entity.Addres;
+
+                if (_dataContext.UserList.ToList()[index].ZipCode >0)
+                    _dataContext.UserList.ToList()[index].ZipCode = entity.ZipCode;
+
+                _dataContext.SaveChanges();
                 return true;
             }
             catch (Exception ex) { return false; }
 
+        }
+        
+        public int GetIndex(int id)
+        {
+            return _dataContext.UserList.ToList().FindIndex(a => a.Id == id);
         }
 
     }

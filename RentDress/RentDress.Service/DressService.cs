@@ -7,6 +7,7 @@ namespace RentDress.Service
     public class DressService : IDressService
     {
         readonly IRepository<DressEntity> _dressRepository;
+
         //check
         public DressService(IRepository<DressEntity> DressRepository)
         {
@@ -18,9 +19,9 @@ namespace RentDress.Service
         }
         public List<DressEntity> GetDressList()
         {
+            
             return _dressRepository.GetAllData();
         }
-
 
         public DressEntity GetById(int id)
         {
@@ -29,21 +30,21 @@ namespace RentDress.Service
 
         public bool Add(DressEntity dress)
         {
-            if(_dressRepository.Add(dress))
+            if(_dressRepository.GetIndex(dress.Id)==-1&& _dressRepository.Add(dress))
                 return true;
             return false;
         }
 
         public bool Delete(int id)
         {
-            if(_dressRepository.Delete(id))
+            if(_dressRepository.GetIndex(id) > -1 && _dressRepository.Delete(id))
                 return true;
             return false;
         }
 
         public bool Update(DressEntity dress)
         {
-            if(_dressRepository.Update(dress))
+            if(_dressRepository.GetIndex(dress.Id) > -1 && _dressRepository.Update(dress))
                 return true;
             return false;
         }

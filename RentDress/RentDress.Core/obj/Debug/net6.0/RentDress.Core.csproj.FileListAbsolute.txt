@@ -10,3 +10,15 @@ C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Core\obj\Debug\net6.0\RentDr
 C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Core\obj\Debug\net6.0\refint\RentDress.Core.dll
 C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.pdb
 C:\Users\user1\Desktop\gitDress\RentDress\RentDress.Core\obj\Debug\net6.0\ref\RentDress.Core.dll
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\bin\Debug\net6.0\RentDress.Core.deps.json
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\bin\Debug\net6.0\RentDress.Core.dll
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\bin\Debug\net6.0\RentDress.Core.pdb
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.AssemblyInfo.cs
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.dll
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\refint\RentDress.Core.dll
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\RentDress.Core.pdb
+C:\Users\user1\Desktop\נסיון\RentDress\RentDress.Core\obj\Debug\net6.0\ref\RentDress.Core.dll
